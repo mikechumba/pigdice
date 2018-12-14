@@ -26,19 +26,19 @@
             <button id="roll" class="d-btn" onclick="rollDice()" >ROLL</button>
          </div>
       </div>
-      <div >
-         <img class="dice-img" src="images/dice/dice3.png" alt="dice image">
+      <div id="dice-image">
+         <!-- image of dice goes here -->
       </div>
       <div class="right-panel text-center">
          <div class="player-panel">
             <p>PLAYER TWO</p>
-            <h1 id="total-score2">89</h1>
+            <h1 id="total-score2"></h1>
             <div class="turn">
                <div class="current-turn">
-                  <p>YOUR ROLL<br><span>3</span></p>
+                  <p>YOUR ROLL<br><span id="current-roll2"></span></p>
                </div>
                <div class="current-turn">
-                  <p>TURN TOTAL<br><span>13</span></p>
+                  <p>TURN TOTAL<br><span id="turn-total2"></span></p>
                </div>
             </div>
             <button id="hold" class="d-btn" onclick="hold()">HOLD</button>
