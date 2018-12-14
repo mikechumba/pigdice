@@ -1,0 +1,53 @@
+html, body {
+   font-family: 'Raleway', sans-serif;
+}
+
+body {
+   padding: 0;
+   margin: 0;
+}
+
+#page {
+   height: 100vh;
+   width: 100%;
+}
+
+.left-panel {
+   background-color: #fff05a;
+   width: 50%;
+   height: 100%;
+   float: left;
+}
+
+.right-panel {
+   background-color: #80475e;
+   width: 50%;
+   height: 100%;
+   float: left;
+}
+
+.player-panel {
+   margin: 30% 0;
+}
+
+.player-panel p {
+   font-size: 15px;
+   color: #ffaa5a;
+   font-weight: 700;
+}
+
+.player-panel h1 {
+   font-size: 50px;
+   color: #80475e;
+   font-weight: 800;
+}
+
+.current-turn {
+   width: 40%;
+   margin: 0 auto;
+   float: left;
+}
+
+.current-turn p br {
+   color: #80475e;
+}
