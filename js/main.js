@@ -14,20 +14,37 @@ const players = [
    }
 ];
 
+//this code just puts out placeholder values
+$('#total-score').html(`${players[0].score}`);
+$('#total-score2').html(`${players[1].score}`);
+
 function rollDice() {
 
    var rollValue = (Math.ceil(Math.random() * 6));
 
-   $('#current-roll').html(`${rollValue}`);
+   if (switchValue === 0) {
+      $('#current-roll').html(`${rollValue}`);
 
-   if (rollValue !== 1) {
-      turnTotal += rollValue;
+      if (rollValue !== 1) {
+         turnTotal += rollValue;
+      } else {
+         turnTotal = 0;
+         hold();
+      }
+
+      $('#turn-total').html(`${turnTotal}`);
    } else {
-      turnTotal = 0;
-      hold();
-   }
+      $('#current-roll2').html(`${rollValue}`);
 
-   $('#turn-total').html(`${turnTotal}`);
+      if (rollValue !== 1) {
+         turnTotal += rollValue;
+      } else {
+         turnTotal = 0;
+         hold();
+      }
+
+      $('#turn-total2').html(`${turnTotal}`);
+   }
 
 }
 
@@ -43,6 +60,12 @@ function hold() {
    turnTotal = 0;
    rollValue = 0;
 
-   $('#total-score').html(`${currentPlayer.score}`);
+   if (switchValue === 0) {
+      $('#total-score2').html(`${currentPlayer.score}`);
+   } else {
+      $('#total-score').html(`${currentPlayer.score}`);
+   }
+
+   
 }
 
