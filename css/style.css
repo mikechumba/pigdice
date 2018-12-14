@@ -26,18 +26,19 @@ body {
    float: left;
 }
 
-.player-panel {
+/* .player-panel {
    margin: 30% 0;
-}
+} */
 
 .player-panel p {
+   margin-top: 30%;
    font-size: 15px;
    color: #ffaa5a;
    font-weight: 700;
 }
 
 .player-panel h1 {
-   font-size: 50px;
+   font-size: 60px;
    color: #80475e;
    font-weight: 800;
 }
@@ -65,7 +66,11 @@ body {
    color: #fff05a;
 }
 
-.right-panel .player-panel .d-btn {
+.right-panel .player-panel .current-turn span {
+   color: #fff05a;
+}
+
+.right-panel .player-panel .d-btn  {
    background-color: #ffaa5a;
    border: none;
    padding: 7px 18px;
@@ -87,4 +92,15 @@ body {
    position: absolute;
    top: 80%;
    left: 44.7%;
+}
+
+.dice-img{
+   position: absolute;
+   top: 47%;
+   left: 47.5%;
+   width: 70px;
+   height: 70px;
+   -webkit-filter: drop-shadow(2px 3px 5px #80475e);
+   filter: drop-shadow(2px 2px 5px #80475e);
+   padding: 5px;
 }
