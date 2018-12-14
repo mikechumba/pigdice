@@ -1,6 +1,18 @@
 
 
-let score = 0;
+let turnTotal = 0;
+
+// player defaults
+const players = [
+   {
+      player: 'PLAYER ONE',
+      totalScore: 0
+   },
+   {
+      player: 'PLAYER TWO',
+      totalScore: 0;
+   }
+]
 
 function rollDice() {
 
@@ -9,18 +21,25 @@ function rollDice() {
    $('#current-roll').html(`${rollValue}`);
 
    if (rollValue !== 1) {
-      score += rollValue;
+      turnTotal += rollValue;
    } else {
-      score = 0;
+      turnTotal = 0;
+      hold();
    }
 
-   $('#turn-total').html(`${score}`);
+   $('#turn-total').html(`${turnTotal}`);
 
 }
+
+var switchValue = 0;
 
 function hold() {
    
    switchValue ^= 1;
 
+   totalScore[switchValue] += turnTotal;
 
+   turnTotal = 0;
+   rollValue = 0;
 }
+
