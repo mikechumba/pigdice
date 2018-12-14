@@ -17,13 +17,13 @@
             <h1>89</h1>
             <div class="turn">
                <div class="current-turn">
-                  <p>TURN TOTAL<br><span>34</span></p>
+                  <p>TURN TOTAL<br><span id="turn-total">34</span></p>
                </div>
                <div class="current-turn">
-                  <p>YOUR ROLL<br><span>4</span></p>
+                  <p>YOUR ROLL<br><span id="current-roll"></span></p>
                </div>
             </div>
-            <button class="d-btn">ROLL</button>
+            <button id="roll" class="d-btn" onclick="rollDice()" >ROLL</button>
          </div>
       </div>
       <div >
@@ -35,17 +35,18 @@
             <h1>89</h1>
             <div class="turn">
                <div class="current-turn">
-                  <p>TURN TOTAL<br><span>34</span></p>
+                  <p>YOUR ROLL<br><span>3</span></p>
                </div>
                <div class="current-turn">
-                  <p>YOUR ROLL<br><span>4</span></p>
+                  <p>TURN TOTAL<br><span>13</span></p>
                </div>
             </div>
-            <button class="d-btn">HOLD</button>
+            <button id="hold" class="d-btn" onclick="hold()">HOLD</button>
          </div>
       </div>
    </div>
-   <script src="https://code.jquery.com/jquery-3.3.1.js" type="javascript"></script>
-   <script src="main.js" type="javascript"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>

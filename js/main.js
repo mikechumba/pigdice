@@ -6,13 +6,13 @@ let turnTotal = 0;
 const players = [
    {
       player: 'PLAYER ONE',
-      totalScore: 0
+      score: 0
    },
    {
       player: 'PLAYER TWO',
-      totalScore: 0;
+      score: 0
    }
-]
+];
 
 function rollDice() {
 
@@ -37,9 +37,12 @@ function hold() {
    
    switchValue ^= 1;
 
-   totalScore[switchValue] += turnTotal;
+   currentPlayer = players[switchValue];
+   currentPlayer.score += turnTotal;
 
    turnTotal = 0;
    rollValue = 0;
+
+   $('#total-score').html(`${currentPlayer.score}`);
 }
 

@@ -92,6 +92,12 @@ body {
    position: absolute;
    top: 80%;
    left: 44.7%;
+   z-index: 3;
+}
+
+.d-btn:active {
+   z-index: 0;
+   box-shadow: none;
 }
 
 .dice-img{
@@ -103,4 +109,8 @@ body {
    -webkit-filter: drop-shadow(2px 3px 5px #80475e);
    filter: drop-shadow(2px 2px 5px #80475e);
    padding: 5px;
+}
+
+.panel-inactive {
+   opacity: 0.5;
 }
