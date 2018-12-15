@@ -11,16 +11,17 @@
 </head>
 <body>
    <div id="page">
+      <button id="new-btn">NEW GAME</button>
       <div class="left-panel text-center">
          <div class="player-panel">
             <p>PLAYER ONE</p>
             <h1 id="total-score"></h1>
             <div class="turn">
                <div class="current-turn">
-                  <p>TURN TOTAL<br><span id="turn-total">34</span></p>
+                  <p>TURN TOTAL<br><span id="turn-total">0</span></p>
                </div>
                <div class="current-turn">
-                  <p>YOUR ROLL<br><span id="current-roll"></span></p>
+                  <p>YOUR ROLL<br><span id="current-roll">0</span></p>
                </div>
             </div>
             <button id="roll" class="d-btn" onclick="rollDice()" >ROLL</button>
@@ -35,14 +36,19 @@
             <h1 id="total-score2"></h1>
             <div class="turn">
                <div class="current-turn">
-                  <p>YOUR ROLL<br><span id="current-roll2"></span></p>
+                  <p>YOUR ROLL<br><span id="current-roll2">0</span></p>
                </div>
                <div class="current-turn">
-                  <p>TURN TOTAL<br><span id="turn-total2"></span></p>
+                  <p>TURN TOTAL<br><span id="turn-total2">0</span></p>
                </div>
             </div>
             <button id="hold" class="d-btn" onclick="hold()">HOLD</button>
          </div>
+      </div>
+      <div class="input container">
+         <input type="text" placeholder="First Player's Name" id="player1">
+         <input type="text" placeholder="Second Player's Name" id="player2">
+         <input type="text" placeholder="Enter the winning score. Must be greater than 50." id="winning-score">
       </div>
    </div>
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
