@@ -138,4 +138,6 @@ function endGame() {
       $('.right-panel').html(`<h1 class="winner">${playerTwo.player} won the game!<h1>`);
    }
 
+   $('.dice-img').hide();
+
 }

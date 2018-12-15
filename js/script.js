@@ -1,7 +1,7 @@
 $('#start-game').click( function(){
    $('.left-panel').show();
  
-  $('.right-panel').show();
+   $('.right-panel').show();
    $('.input').hide();
 
    $('body').removeClass('page-color');   
@@ -13,9 +13,10 @@ $('#start-game').click( function(){
 });
 
 $('#roll').click( function(){
-   $('.dice-img').show();
-
+   
    rollDice();
+
+   $('.dice-img').show();
 
 });
 
@@ -50,5 +51,4 @@ $('#new-btn').click( function(){
 //    $('.player-panel').hide();
 //    $('.right-panel').html(`<h1 class="winner">${playerOne.player} won the game!<h1>`);
 // }
-
 
