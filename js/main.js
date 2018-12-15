@@ -1,6 +1,7 @@
-var switchValue; 
 
-var turnTotal = 0;
+var switchValue = 0; 
+
+let turnTotal = 0;
 
 // player defaults
 const players = [
@@ -19,11 +20,9 @@ $('#total-score').html(`${players[0].score}`);
 $('#total-score2').html(`${players[1].score}`);
 $('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image" onclick="rollDice()">`);
 
-var rollValue;
-
 function rollDice() {
 
-   rollValue = (Math.ceil(Math.random() * 6));
+   var rollValue = (Math.ceil(Math.random() * 6));
 
    //condition to switch the dice image according rollvalue
    switch (rollValue) {
@@ -96,11 +95,11 @@ function hold() {
    endGame();
 }
 
-const playerOne = players[0];
-const playerTwo = players[1];
+let playerOne = players[0];
+let playerTwo = players[1];
 
 // variable to store the winning score of the gamers
-var winningScore;
+let winningScore;
 
 function newGame() {
    
@@ -110,7 +109,19 @@ function newGame() {
    $('#playername').html(`${playerOne.player}`);
    $('#playername2').html(`${playerTwo.player}`);
 
+   do {
+      playerOne.player = 'Player One';
+   } while (playerOne.player.length === 0);
+
+   do {
+      playerTwo.player = 'Player Two';
+   } while (playerTwo.player.length === 0);
+
    winningScore = parseInt($('#winning-score').val());
+
+   do {
+      winningScore = 30;
+   } while (winningScore.length === 0);
 
    switchValue = 0;
 
@@ -121,10 +132,10 @@ function endGame() {
 
    if (playerOne.score >= winningScore) {
       $('.player-panel').hide();
-      $('.right-panel').html(`<h1 class="winner">${playerTwo.player} won the game!<h1>`);
+      $('.left-panel').html(`<h1 class="winner">${playerOne.player} won the game!<h1>`);
    } else if (playerTwo.score >= winningScore) {
       $('.player-panel').hide();
-      $('.left-panel').html(`<h1 class="winner">${playerOne.player} won the game!<h1>`);
+      $('.right-panel').html(`<h1 class="winner">${playerTwo.player} won the game!<h1>`);
    }
 
 }

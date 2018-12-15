@@ -19,17 +19,17 @@ $('#roll').click( function(){
 
 });
 
-if(switchValue === 1 || rollValue === 1) {
-   $('.left-panel').css('background-color', '#80475e');
-   $('.right-panel').css('background-color', '#fff05a');
-   $('#total-score2, #turn-total2, #current-roll2, ').css('color', '#80475e');
-   $('#total-score, #turn-total, #current-roll').css('color', '#fff05a');
-} else if(switchValue === 0 || rollValue === 1) {
-   $('.left-panel').css('background-color', '#fff05a');
-   $('.right-panel').css('background-color', '#80475e');
-   $('#total-score, #turn-total, #current-roll').css('color', '#80475e');
-   $('#total-score2, #turn-total2, #current-roll2').css('color', '#fff05a');
-}
+// if(switchValue === 1 || rollValue === 1) {
+//    $('.left-panel').css('background-color', '#80475e');
+//    $('.right-panel').css('background-color', '#fff05a');
+//    $('#total-score2, #turn-total2, #current-roll2, ').css('color', '#80475e');
+//    $('#total-score, #turn-total, #current-roll').css('color', '#fff05a');
+// } else if(switchValue === 0 || rollValue === 1) {
+//    $('.left-panel').css('background-color', '#fff05a');
+//    $('.right-panel').css('background-color', '#80475e');
+//    $('#total-score, #turn-total, #current-roll').css('color', '#80475e');
+//    $('#total-score2, #turn-total2, #current-roll2').css('color', '#fff05a');
+// }
 
 $('#hold').click( function(){
 
