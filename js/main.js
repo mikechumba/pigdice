@@ -1,4 +1,5 @@
 
+var switchValue = 0; 
 
 let turnTotal = 0;
 
@@ -71,8 +72,6 @@ function rollDice() {
 
 }
 
-var switchValue = 0;
-
 function hold() {
    
    switchValue ^= 1;
@@ -98,6 +97,9 @@ function hold() {
 let playerOne = players[0];
 let playerTwo = players[1];
 
+// variable to store the winning score of the gamers
+let winningScore;
+
 function newGame() {
    
    playerOne.player = $('#player1').val();
@@ -106,6 +108,21 @@ function newGame() {
    $('#playername').html(`${playerOne.player}`);
    $('#playername2').html(`${playerTwo.player}`);
 
+   winningScore = parseInt($('#winning-score').val());
+
+   switchValue = 0;
 
 }
 
+
+function endGame() {
+
+   if (playerOne.score >= winningScore) {
+      $('.player-panel').hide();
+      $('.left-panel').html(`<h1 class="winner">${playerOne.player} won the game!<h1>`);
+   } else if (playerTwo.score >= winningScore) {
+      $('.player-panel').hide();
+      $('.right-panel').html(`<h1 class="winner">${playerTwo.player} won the game!<h1>`);
+   }
+
+}

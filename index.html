@@ -10,11 +10,11 @@
    <title>Pig Dice</title>
 </head>
 <body>
-   <div id="page">
+   <div id="page" class="page-color">
       <button id="new-btn">NEW GAME</button>
       <div class="left-panel text-center">
          <div class="player-panel">
-            <p>PLAYER ONE</p>
+            <p id="playername">PLAYER ONE</p>
             <h1 id="total-score"></h1>
             <div class="turn">
                <div class="current-turn">
@@ -24,7 +24,7 @@
                   <p>YOUR ROLL<br><span id="current-roll">0</span></p>
                </div>
             </div>
-            <button id="roll" class="d-btn" onclick="rollDice()" >ROLL</button>
+            <button id="roll" class="d-btn">ROLL</button>
          </div>
       </div>
       <div id="dice-image">
@@ -32,7 +32,7 @@
       </div>
       <div class="right-panel text-center">
          <div class="player-panel">
-            <p>PLAYER TWO</p>
+            <p id="playername2">PLAYER TWO</p>
             <h1 id="total-score2"></h1>
             <div class="turn">
                <div class="current-turn">
@@ -42,17 +42,22 @@
                   <p>TURN TOTAL<br><span id="turn-total2">0</span></p>
                </div>
             </div>
-            <button id="hold" class="d-btn" onclick="hold()">HOLD</button>
+            <button id="hold" class="d-btn">HOLD</button>
          </div>
       </div>
       <div class="input container">
          <input type="text" placeholder="First Player's Name" id="player1">
          <input type="text" placeholder="Second Player's Name" id="player2">
          <input type="text" placeholder="Enter the winning score. Must be greater than 50." id="winning-score">
+         <div class="new-game">
+            <button id="start-game">START GAME</button>
+            <button id="game-rules">THE RULES</button>
+         </div>
       </div>
    </div>
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
    <script src="js/bootstrap.min.js"></script>
    <script src="js/main.js"></script>
+   <script src="js/script.js"></script>
 </body>
 </html>
