@@ -17,7 +17,7 @@ const players = [
 //this code just puts out placeholder values
 $('#total-score').html(`${players[0].score}`);
 $('#total-score2').html(`${players[1].score}`);
-$('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image">`);
+$('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image" onclick="rollDice()">`);
 
 function rollDice() {
 
@@ -26,22 +26,22 @@ function rollDice() {
    //condition to switch the dice image according rollvalue
    switch (rollValue) {
       case 1:
-      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image">`).;
+      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image" onclick="rollDice()">`);
       break;
       case 2:
-      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice2.png" alt="dice image">`);
+      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice2.png" alt="dice image" onclick="rollDice()">`);
       break;
       case 3:
-      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice3.png" alt="dice image">`);
+      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice3.png" alt="dice image" onclick="rollDice()">`);
       break;
       case 4:
-      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice4.png" alt="dice image">`);
+      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice4.png" alt="dice image" onclick="rollDice()">`);
       break;
       case 5:
-      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice5.png" alt="dice image">`);
+      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice5.png" alt="dice image" onclick="rollDice()">`);
       break;
       case 6:
-      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice6.png" alt="dice image">`);
+      $('#dice-image').html(`<img class="dice-img" src="images/dice/dice6.png" alt="dice image" onclick="rollDice()">`);
       break;
    }
 
@@ -85,9 +85,27 @@ function hold() {
 
    if (switchValue === 0) {
       $('#total-score2').html(`${currentPlayer.score}`);
+      turnTotal = 0;
+      rollValue = 0;
    } else {
       $('#total-score').html(`${currentPlayer.score}`);
+      turnTotal = 0;
+      rollValue = 0;
    }
+
+}
+
+let playerOne = players[0];
+let playerTwo = players[1];
+
+function newGame() {
+   
+   playerOne.player = $('#player1').val();
+   playerTwo.player = $('#player2').val();
+
+   $('#playername').html(`${playerOne.player}`);
+   $('#playername2').html(`${playerTwo.player}`);
+
 
 }
 
