@@ -197,6 +197,13 @@ body {
    box-shadow: 1px 1px 7px 0 #80475e;
 }
 
+#rules {
+   display: none;
+   font-weight: 500;
+   line-height: 1.5;
+}
+
+
 #start-game:active, #game-rules:active {
    z-index: 0;
    box-shadow: none;
@@ -212,6 +219,10 @@ body {
    margin: 35% auto;
    width: 36%;
    line-height: 1.5;
+}
+
+#turn1, #turn2 {
+   display: none;
 }
 
 @media screen and (max-width: 480px) {

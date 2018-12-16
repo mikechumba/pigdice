@@ -67,6 +67,7 @@ function rollDice() {
       $('#turn-total2').html(`${turnTotal}`);
    }
 
+
 }
 
 function hold() {
@@ -116,13 +117,12 @@ function newGame() {
 
    var winScore = $('#winning-score').val();
 
+   // sets default winningScore if the players don't set it themselves
    if (winScore === '') {
-      winningScore = 30;
+      winningScore = 100;
    } else {
       winningScore = parseInt(winScore);
    }
-
-
 
    switchValue = 0;
 

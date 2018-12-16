@@ -17,7 +17,7 @@ This is a simple game of pig dice made using Javascript. Two users can get to pl
 
 
 ### Project Approach
-
+   
 | Action       | Result       | After  |
 | ------------- |:-------------:| -----:|
 | Click on roll      | display random number between 1 and 6 | Add that number to the turn total |
