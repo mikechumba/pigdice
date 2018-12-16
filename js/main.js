@@ -95,33 +95,30 @@ function hold() {
    endGame();
 }
 
-let playerOne = players[0];
-let playerTwo = players[1];
+let playerOne = players[1];
+let playerTwo = players[0];
 
 // variable to store the winning score of the gamers
-let winningScore;
+let winningScore = 0;
 
 function newGame() {
    
    playerOne.player = $('#player1').val();
    playerTwo.player = $('#player2').val();
 
+   if (playerOne.player === '') {
+      playerOne.player = 'Player One';
+   }
+
+   if (playerTwo.player === '') {
+      playerTwo.player = 'Player Two';
+   }
+
    $('#playername').html(`${playerOne.player}`);
    $('#playername2').html(`${playerTwo.player}`);
 
-   do {
-      playerOne.player = 'Player One';
-   } while (playerOne.player.length === 0);
-
-   do {
-      playerTwo.player = 'Player Two';
-   } while (playerTwo.player.length === 0);
 
    winningScore = parseInt($('#winning-score').val());
-
-   do {
-      winningScore = 30;
-   } while (winningScore.length === 0);
 
    switchValue = 0;
 
@@ -129,6 +126,10 @@ function newGame() {
 
 
 function endGame() {
+
+   if (winningScore === '') {
+      winningScore = 30;
+   }
 
    if (playerOne.score >= winningScore) {
       $('.player-panel').hide();
