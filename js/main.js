@@ -15,10 +15,7 @@ const players = [
    }
 ];
 
-//this code just puts out placeholder values
-$('#total-score').html(`${players[0].score}`);
-$('#total-score2').html(`${players[1].score}`);
-$('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image" onclick="rollDice()">`);
+
 
 function rollDice() {
 
@@ -117,8 +114,15 @@ function newGame() {
    $('#playername').html(`${playerOne.player}`);
    $('#playername2').html(`${playerTwo.player}`);
 
+   var winScore = $('#winning-score').val();
 
-   winningScore = parseInt($('#winning-score').val());
+   if (winScore === '') {
+      winningScore = 30;
+   } else {
+      winningScore = parseInt(winScore);
+   }
+
+
 
    switchValue = 0;
 
@@ -126,10 +130,6 @@ function newGame() {
 
 
 function endGame() {
-
-   if (winningScore === '') {
-      winningScore = 30;
-   }
 
    if (playerOne.score >= winningScore) {
       $('.player-panel').hide();

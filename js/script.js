@@ -12,6 +12,11 @@ $('#start-game').click( function(){
 
 });
 
+//this code just puts out placeholder values
+$('#total-score').html(`${players[0].score}`);
+$('#total-score2').html(`${players[1].score}`);
+$('#dice-image').html(`<img class="dice-img" src="images/dice/dice1.png" alt="dice image" onclick="rollDice()">`);
+
 $('#roll').click( function(){
    
    rollDice();
